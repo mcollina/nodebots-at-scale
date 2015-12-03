@@ -263,3 +263,120 @@ button
 
 .trans
   background: rgba(0,0,0,0) !important
+
+.nodebot
+  margin:0 auto;
+  z-index:2;
+  opacity: 1;
+  width:250px; /* all the nested css is done as percentages of this, so you can scale it to your <3's content */
+  height:250px;
+  background-color: #F8E01E;
+  position:relative;
+
+  .icon
+    position:absolute;
+    bottom:8%;
+    right:8%;
+    width:45.6%;
+    height:50%;
+
+    .bobble
+      width:12.5%;
+      height:12%;
+      border-radius: 100%;
+      margin:5% auto -3.8%;
+
+  .icon *
+    background: #2e2e2c;
+
+  .antenna
+    width:6%;
+    margin:0 auto 4%;
+    height:16.5%;
+    border-bottom-left-radius: 80% 30%;
+    border-bottom-right-radius: 80% 30%;
+
+  .head
+    width: 100%;
+    height: 48.5%;
+    border-top-left-radius: 15% 25%;
+    border-top-right-radius: 15% 25%;
+    position:relative;
+
+    .eye
+      width:18%;
+      height:33.5%;
+      margin:0 18.2%;
+      border-radius: 100%;
+      background-color: #F8E01E;
+      display: inline-block;
+      position:absolute;
+      top:26%;
+      left: 0px;
+      -webkit-animation: blink 5s 2s infinite;
+      animation: blink 5s 2s infinite;
+
+    .eye.right
+      left: auto;
+      right:0;
+
+    .eye.blink
+      height: 6%;
+      top:36%;
+      border-radius: 0;
+      background-color: #000;
+
+  .neck
+    border-radius: 20px;
+    width: 69%;
+    height: 6%;
+    margin: 3.6% auto 0;
+
+  .neck:last-child
+    width: 48%;
+
+@-webkit-keyframes blink {
+  0%, 4%, 8%, 100%{
+    height:33.5%;
+    border-radius: 100%;
+    background-color: #F8E01E;
+    top:26%;
+  }
+  2%, 6% {
+    height: 6%;
+    top:36%;
+    border-radius: 0;
+    background-color: #000;
+  }
+}
+
+@keyframes blink {
+  0%, 4%, 8%, 100%{
+    height:33.5%;
+    border-radius: 100%;
+    background-color: #F8E01E;
+    top:26%;
+  }
+  2%, 6% {
+    height: 6%;
+    top:36%;
+    border-radius: 0;
+    background-color: #000;
+  }
+}
+
+.copyright
+  font-size: 10px
+  text-align: right
+  position: absolute
+  bottom: 0px
+  right: 20px;
+  margin: 0px
+  padding: 0px
+  opacity: 0.5
+
+  a
+    color: #404040
+
+  img
+    height: 10px;

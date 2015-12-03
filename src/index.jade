@@ -3,7 +3,7 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    title Cocktail Robots
+    title NodeBots at scale
 
     link(rel='stylesheet', type='text/css', href='build/build.css')
 
@@ -12,8 +12,39 @@ html
     article
 
       section
-        h1 Cocktail Robots
-        h3 How we did 134 cocktails yesterday night
+        a(href="http://nearform.com" style="width: 20%")
+          img(src="./images/nearform.svg")
+        h1 NodeBots
+          br
+          | at Scale
+        h3 by&nbsp;
+          a(href="http://twitter.com/matteocollina") @matteocollina
+
+      section
+        h1 NodeBots
+        .nodebot
+          .icon
+            .bobble
+            .antenna
+            .head
+              div(class="eye left")
+              div(class="eye right")
+            .neck
+            .neck
+        .copyright Taken from the nodebots.io site
+
+      section
+        img(src="images/equation.png")
+        .copyright Taken from the nodebots.io site
+
+      section
+        h3 JS robotics modules
+        ul.bullet
+          li
+            a(href="http://npm.im/johnny-five") johnny-five
+          li
+            a(href="http://npm.im/node-serial-port") serial-port
+          li ... and many more!
 
       section
         h3 Julian Cheal @ JSConf Budapest
@@ -67,12 +98,21 @@ html
           li Julian Cheal
           li Matteo Collina
 
+      section.full-imgs
+        img(src='images/me.png')
+        h3
+          a(href='http://github.com/mcollina') http://github.com/mcollina
+
       section
         h1 Thanks!
+        a(href="http://nearform.com" style="width: 20%")
+          img(src="./images/nearform.svg")
         br
-        h3 <a href="mailto:hello@matteocollina.com">hello@matteocollina.com</a>
+        p If you need help with Node.js or the IoT
+        br
+        h3 <a href="mailto:matteo.collina@nearform.com">matteo.collina@nearform.com</a>
         h3 <a href="http://twitter.com/matteocollina">@matteocollina</a> on Twitter
-        h3 <a href="http://www.matteocollina.com">www.matteocollina.com</a>
+        h3 <a href="http://www.nearform.com">www.nearform.com</a>
 
 
     script(src='build/build.js')
