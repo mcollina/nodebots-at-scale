@@ -46,15 +46,124 @@ html
             a(href="http://npm.im/node-serial-port") serial-port
           li ... and many more!
 
+      section(data-bespoke-backdrop='arduino').trans
+        .copyright 
+          img(src="images/cc_attribution.png")
+          | &nbsp;Photo by
+          a(href="https://www.flickr.com/photos/snootlab/6052455554/")
+            | &nbsp;Snootlab
+
+      section(data-bespoke-backdrop='usb').trans
+        .copyright 
+          img(src="images/cc_attribution.png")
+          | &nbsp;Photo by
+          a(href="https://www.flickr.com/photos/oskay/2418503818/")
+            | &nbsp;Windell Oskay
+
+      section(data-bespoke-backdrop='laptop').trans
+
+      section
+        h3 Arduino + USB cable + Laptop = NodeBot
+        .nodebot
+          .icon
+            .bobble
+            .antenna
+            .head
+              div(class="eye left")
+              div(class="eye right")
+            .neck
+            .neck
+        .copyright Taken from the nodebots.io site
+
+      section
+        h3 Prototypes
+
+        cite(style="width: 80%") "A prototype is an early sample, model, or release of a product built to test a concept or process or to act as a thing to be replicated or learned from."
+          | -&nbsp;
+          a(href="https://en.wikipedia.org/wiki/Prototype") from Wikipedia
+
+      section
+        img(src="../images/wintersmith.jpg" style="height: 90%")
+
+      section(data-bespoke-backdrop='snow').trans
+        h2(style="color: white") All snowflakes are unique
+
+      section(data-bespoke-backdrop='snow').trans
+        h2(style="color: white") Each robot is its own snowflake
+
+      section
+        h3 NodeConf.eu 2015
+
+      section
+        h3 Cian
+        p "we need a robotic thing at NodeConf.eu"
+
       section
         h3 Julian Cheal @ JSConf Budapest
         img(src='images/julian.jpg' style='width: 90%')
+
+      section
+        h3 Cocktail Robot!
+
+        ul.bullet
+          li Three pumps for three ingredients
+          li Controlled by an Arduino
+          li Brought to the network by a Raspberry Pi 2
+
+      section
+        h3 The pumps
+        ul.bullet
+          li Peristaltic pumps for aquariums
+          li powered by 12V
+          li on/off behavior
+          li no pulse wide modulation needed
+
+      section
+        h3 Controlling circuit
+        ul.bullet
+          li Car relay on/off
+          // picture
+
+      section
+        h2 Our goal for NodeConf.eu
+        ul.bullet
+          li Serve 150 cocktails in 1 hour and a half
+          li 90 minutes for 150 cocktails
+          li 3 minutes for a cocktail
+          li 150 * 3 / 9 = 3.33
+          li Redundancy: 6 robots
+
+      section
+        h2 The problem
+        ul.bullet
+          li We decided to control 6 pumps from a Pi2
+          li No Arduinos
+          li The car relay worked needed 5V to activate
+          li A Pi2 as GPIO pins at 3.3V
+          li Circuit Design?
+
+      section
+        h2 Circuit design
+
+      section
+        h2 Norway
+
+      section
+        h2 The engineer solution
+        // the hammer
+
+      section
+        h2 Sourcing parts
 
       section
         h2 Lots of soldering
         h3 ..and burns
 
         img(src='images/IMG_3180.jpg' style='height: 80%')
+
+      section(data-bespoke-backdrop='robot').trans
+        .copyright(style="color: white") photo by&nbsp;
+          a(href="https://twitter.com/fotoverite" style="color: white") Matthew Bergman
 
       section
         div(style='width: 90%; heigth: 90%;')
@@ -64,9 +173,63 @@ html
             source(src="images/IMG_3199.m4v" type="video/mp4")
 
       section
+        h2 Architecture Requirements
+        ul.bullet
+          li Control panel & status board
+          li Robot code on the Pi
+          li Robot code agnostic to the recepies
+          li Recepies on the panel's server
+          li Persistent job queue
+          li 3 days to write it!
+
+      section
+        h2 Using a pub/sub broker
+
+      section
+        h2 Publish-Subscribe
+        img(src="images/pubsub.png", style="height: 100%")
+
+      section.full-imgs
+        img(src="images/mqttorg.svg")
+
+      section
+        h2 MQTT
+        ul
+          li publish/subscribe protocol
+          li multiple quality of service level..
+          li ..with at-least-once and exactly-once semantics
+          li low overhead (2 bytes at minimum)
+          li offline messaging
+          li retained messages, like a key/value store
+          li can run over WebSocket
+
+      section
         div(style='width: 90%;')
           img(src='images/MQTT.js.png' style='width: 50%; display: block;')
           img(src='images/johnny-five.png' style='width: 50%; display: block;')
+
+      section
+        h2 MQTT.js example
+        pre
+          code.language-javascript.
+            var client = mqtt.connect()
+            client.publish('msg', 'hello', (err) => {
+              console.log('sent!', err)
+            })
+            client.subscribe("msg/#")
+            client.on('message', (topic, payload) => {
+              console.log(topic, payload.toString())
+            })
+
+      section
+        h2 Message Flow
+        img(src="images/pubsub-arch.png", style="height: 100%")
+
+      section
+        h2 One last problem
+
+      section
+        h2 Viscosity
 
       section
         h2 In the process..
@@ -77,9 +240,25 @@ html
           li We fried 2 Raspberry Pi
           li We popped 4 transistors
           li ..and made one :)
-          li We Wired 200+ wires
+          li We wired 200+ wires
           li We soldered five boards
           li We live-deployed 10+ times while serving cocktails
+
+      section
+        h2 Unsolved problems
+        ul.bullet
+          li deploying code to the 4 board is hard
+          li WiFi is hard
+          li configuration is usually complex
+
+      section
+        h2 Lesson Learned
+        ul.bullet
+          li "do or do not, there is no try"
+          li resiliency can get you where you want
+          li DO SOURCE YOUR PARTS CAREFULLY
+          li keep it simple
+          li building snowflakes is fun!
 
       section
         h2 Open Source
@@ -107,8 +286,6 @@ html
         h1 Thanks!
         a(href="http://nearform.com" style="width: 20%")
           img(src="./images/nearform.svg")
-        br
-        p If you need help with Node.js or the IoT
         br
         h3 <a href="mailto:matteo.collina@nearform.com">matteo.collina@nearform.com</a>
         h3 <a href="http://twitter.com/matteocollina">@matteocollina</a> on Twitter

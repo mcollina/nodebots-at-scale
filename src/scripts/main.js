@@ -24,16 +24,16 @@ bespoke.from('article', [
 
 function runAllVideos (bespoke) {
   bespoke.on('activate', function (slide) {
-    console.log(slide)
+    var videos = slide.slide.getElementsByTagName("video")
+    for (var i = 0; i < videos.length; i++) {
+      videos[i].play()
+    }
+  })
+
+  bespoke.on('deactivate', function (slide) {
+    var videos = slide.slide.getElementsByTagName("video")
+    for (var i = 0; i < videos.length; i++) {
+      videos[i].pause()
+    }
   })
 }
-
-function startVideos () {
-  var videos = document.getElementsByTagName("video")
-
-  for (var i = 0; i < videos.length; i++) {
-    videos[i].play()
-  }
-}
-
-startVideos()
