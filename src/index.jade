@@ -31,11 +31,13 @@ html
               div(class="eye right")
             .neck
             .neck
-        .copyright Taken from the nodebots.io site
+        .copyright Credits
+          a(href="http://github.com/nodebots") &nbsp;http://github.com/nodebots
 
       section
         img(src="images/equation.png")
-        .copyright Taken from the nodebots.io site
+        .copyright Credits
+          a(href="http://github.com/nodebots") &nbsp;http://github.com/nodebots
 
       section
         h3 JS robotics modules
@@ -73,7 +75,8 @@ html
               div(class="eye right")
             .neck
             .neck
-        .copyright Taken from the nodebots.io site
+        .copyright Credits
+          a(href="http://github.com/nodebots") &nbsp;http://github.com/nodebots
 
       section
         h3 Prototypes
@@ -93,9 +96,9 @@ html
 
       section(data-bespoke-backdrop='nodeconfeu').trans
 
-      section
-        h3 Cian
-        p "we need a robotic thing at NodeConf.eu"
+      section(data-bespoke-backdrop='cian').trans
+        .copyright(style="color: white") photo by&nbsp;
+          a(href="https://twitter.com/fotoverite" style="color: white") Matthew Bergman
 
       section
         h3 Julian Cheal @ JSConf Budapest
@@ -159,21 +162,6 @@ html
         h3 ..and burns
 
         img(src='images/IMG_3180.jpg' style='height: 80%')
-
-      section
-        div(style='width: 90%; heigth: 90%;')
-          video(autoplay loop style='width: 50%; display: block; float: right; position: relative;')
-            source(src="images/IMG_3218.m4v" type="video/mp4")
-          video(autoplay loop style='width: 50%; display: block; float: left; position: relative;')
-            source(src="images/IMG_3199.m4v" type="video/mp4")
-
-      section(data-bespoke-backdrop='robot').trans
-        .copyright(style="color: white") photo by&nbsp;
-          a(href="https://twitter.com/fotoverite" style="color: white") Matthew Bergman
-
-      section(data-bespoke-backdrop='robot1').trans
-
-      section(data-bespoke-backdrop='robot2').trans
 
       section
         h2 Architecture Requirements
@@ -248,6 +236,27 @@ html
           li We live-deployed 10+ times while serving cocktails
 
       section
+        div(style='width: 90%; heigth: 90%;')
+          video(autoplay loop style='width: 50%; display: block; float: right; position: relative;')
+            source(src="images/IMG_3218.m4v" type="video/mp4")
+          video(autoplay loop style='width: 50%; display: block; float: left; position: relative;')
+            source(src="images/IMG_3199.m4v" type="video/mp4")
+
+      section(data-bespoke-backdrop='robot1').trans
+
+      section(data-bespoke-backdrop='robot2').trans
+
+      section(data-bespoke-backdrop='robot3').trans
+        .copyright(style="color: white") photo by&nbsp;
+          a(href="https://twitter.com/fotoverite" style="color: white") Matthew Bergman
+
+      section(data-bespoke-backdrop='robot').trans
+        .copyright(style="color: white") photo by&nbsp;
+          a(href="https://twitter.com/fotoverite" style="color: white") Matthew Bergman
+
+      section(data-bespoke-backdrop='callback-hell').trans
+
+      section
         h2 Unsolved problems
         ul.bullet
           li deploying code to the 4 board is hard
@@ -273,12 +282,14 @@ html
 
       section
         h2 The Team!
-        ul
+        ul.bullet
           li Darragh Hayes
           li Glen Keane
           li Marco Piraccini
           li Julian Cheal
           li Matteo Collina
+
+      section(data-bespoke-backdrop='joe').trans
 
       section.full-imgs
         img(src='images/me.png')
