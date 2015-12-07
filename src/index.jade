@@ -105,26 +105,20 @@ html
         img(src='images/julian.jpg' style='width: 90%')
 
       section
-        h3 Cocktail Robot!
+        h2 Cocktail Robot!
 
         ul.bullet
           li Three pumps for three ingredients
-          li Controlled by an Arduino
+          li 12V relays for turning them on and off
           li Brought to the network by a Raspberry Pi 2
 
       section
-        h3 The pumps
+        h2 The pumps
         ul.bullet
           li Peristaltic pumps for aquariums
           li powered by 12V
           li on/off behavior
           li no pulse wide modulation needed
-
-      section
-        h3 Controlling circuit
-        ul.bullet
-          li Car relay on/off
-          // picture
 
       section
         h2 Our goal for NodeConf.eu
@@ -139,23 +133,42 @@ html
         h2 The problem
         ul.bullet
           li We decided to control 6 pumps from a Pi2
-          li No Arduinos
-          li The car relay worked needed 5V to activate
-          li A Pi2 as GPIO pins at 3.3V
+          li Wi-Fi!
           li Circuit Design?
 
       section
-        h2 Circuit design
+        h2 Controlling circuit
+        img(src="../images/schema2.svg" style="height: 80%")
 
       section
-        h2 Norway
+        h2 Controlling circuit
+        ul.bullet
+          li 6 pumps x 3 = 18 pumps
+          li 18 transistors
+          li 18 diodes
+          li 3 x prototyping boards
 
       section
-        h2 The engineer solution
-        // the hammer
+        h2 Too much soldering!
+
+      section(data-bespoke-backdrop='norway').trans
+        h2(style="color: white") My 2-week vacation
+
+      section(data-bespoke-backdrop='hammer').trans
+        h2(style="color: white") The engineering solution
+
+      section
+        h2 No diode
+        img(src="../images/schema.svg" style="height: 80%")
 
       section
         h2 Sourcing parts
+        ul.bullet
+          li 6 pumps x 3 + 1 = 19 pumps
+          li 20 transistors
+          li 5 x prototyping boards
+          li Some 2.2KOHM resistors
+          li LOADS of wires
 
       section
         h2 Lots of soldering
@@ -217,15 +230,39 @@ html
         img(src="images/pubsub-arch.png", style="height: 100%")
 
       section
-        h2 One last problem
+        h2 Problem: The interface
+        img(src="../images/pushbutton.jpg", style="height: 80%")
 
       section
-        h2 Viscosity
+        h2 Problem: The interface
+        img(src="../images/pushbutton2.jpg", style="height: 80%")
+
+      section
+        h2 Button controlling circuit
+        img(src="../images/schema3.svg", style="height: 80%")
+
+      section
+        h2 We were one TIP120 short
+        img(src="../images/twitter.png", style="height: 80%")
+
+      section
+        h2 Solution we built one!
+        ul.bullet
+          li the TIP120 is controlled by voltage that can drive high currents
+          li we had a NPN transistor controlled by voltage that can drive low currents
+          li we had a transistor controlled by low currents that can drive high currents
+          li remembering my analog electronics exam took 1 day
+
+      section
+        h2 One last problem
+
+      section(data-bespoke-backdrop='bottle').trans
+        h2(style="color: white; margin-left: 20%;") Viscosity
 
       section
         h2 In the process..
 
-        ul
+        ul.bullet
           li We did a lot of testing..
           li ..and tasting
           li We fried 2 Raspberry Pi
