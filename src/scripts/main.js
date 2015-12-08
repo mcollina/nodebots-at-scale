@@ -7,6 +7,7 @@ var bespoke = require('bespoke'),
   backdrop = require('bespoke-backdrop'),
   scale = require('bespoke-scale'),
   hash = require('bespoke-hash'),
+  camera = require('bespoke-camera'),
   progress = require('bespoke-progress');
 
 // Bespoke.js
@@ -14,6 +15,7 @@ bespoke.from('article', [
   classes(),
   keys(),
   touch(),
+  camera({ width: "320px" }),
   bullets('li, .bullet'),
   backdrop(),
   scale(),
@@ -37,3 +39,8 @@ function runAllVideos (bespoke) {
     }
   })
 }
+
+// Prism syntax highlighting
+// This is actually loaded from "bower_components" thanks to
+// debowerify: https://github.com/eugeneware/debowerify
+require('prism');
