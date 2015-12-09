@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>NodeBots at scale</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section><a href="http://nearform.com" style="width: 20%"><img src="./images/nearform.svg"></a>
+        <h1>NodeBots<br>at Scale</h1>
+        <h3>by&nbsp;<a href="http://twitter.com/matteocollina">@matteocollina</a></h3>
+      </section>
+      <section>
+        <h1>NodeBots</h1>
+        <div class="nodebot">
+          <div class="icon">
+            <div class="bobble"></div>
+            <div class="antenna"></div>
+            <div class="head">
+              <div class="eye left"></div>
+              <div class="eye right"></div>
+            </div>
+            <div class="neck"></div>
+            <div class="neck"></div>
+          </div>
+        </div>
+        <div class="copyright">Credits<a href="http://github.com/nodebots">&nbsp;http://github.com/nodebots</a></div>
+      </section>
+      <section><img src="images/equation.png">
+        <div class="copyright">Credits<a href="http://github.com/nodebots">&nbsp;http://github.com/nodebots</a></div>
+      </section>
+      <section>
+        <h3>JS robotics modules</h3>
+        <ul class="bullet">
+          <li><a href="http://npm.im/johnny-five">johnny-five</a></li>
+          <li><a href="http://npm.im/node-serial-port">serial-port</a></li>
+          <li>... and many more!</li>
+        </ul>
+      </section>
+      <section data-bespoke-backdrop="arduino" class="trans">
+        <div class="copyright"><img src="images/cc_attribution.png">&nbsp;Photo by<a href="https://www.flickr.com/photos/snootlab/6052455554/">&nbsp;Snootlab</a></div>
+      </section>
+      <section data-bespoke-backdrop="usb" class="trans">
+        <div class="copyright"><img src="images/cc_attribution.png">&nbsp;Photo by<a href="https://www.flickr.com/photos/oskay/2418503818/">&nbsp;Windell Oskay</a></div>
+      </section>
+      <section data-bespoke-backdrop="laptop" class="trans"></section>
+      <section>
+        <h3>Arduino + USB cable + Laptop = NodeBot</h3>
+        <div class="nodebot">
+          <div class="icon">
+            <div class="bobble"></div>
+            <div class="antenna"></div>
+            <div class="head">
+              <div class="eye left"></div>
+              <div class="eye right"></div>
+            </div>
+            <div class="neck"></div>
+            <div class="neck"></div>
+          </div>
+        </div>
+        <div class="copyright">Credits<a href="http://github.com/nodebots">&nbsp;http://github.com/nodebots</a></div>
+      </section>
+      <section>
+        <h3>Prototypes</h3>
+        <cite style="width: 80%">
+          "A prototype is an early sample, model, or release of a product built to test a concept or process or to act as a thing to be replicated or learned from."
+          -&nbsp;<a href="https://en.wikipedia.org/wiki/Prototype">from Wikipedia</a>
+        </cite>
+      </section>
+      <section data-bespoke-backdrop="snow" class="trans">
+        <h2 style="color: white">All snowflakes are unique</h2>
+      </section>
+      <section data-bespoke-backdrop="snow" class="trans">
+        <h2 style="color: white">Each robot is its own snowflake</h2>
+      </section>
+      <section><img src="../images/wintersmith.jpg" style="height: 90%"></section>
+      <section data-bespoke-backdrop="nodeconfeu" class="trans"></section>
+      <section data-bespoke-backdrop="cian" class="trans">
+        <div style="color: white" class="copyright">photo by&nbsp;<a href="https://twitter.com/fotoverite" style="color: white">Matthew Bergman</a></div>
+      </section>
+      <section>
+        <h3>Julian Cheal @ JSConf Budapest</h3><img src="images/julian.jpg" style="width: 90%">
+      </section>
+      <section>
+        <h2>Cocktail Robot!</h2>
+        <ul class="bullet">
+          <li>Three pumps for three ingredients</li>
+          <li>12V relays for turning them on and off</li>
+          <li>Brought to the network by a Raspberry Pi 2</li>
+        </ul>
+      </section>
+      <section>
+        <h2>The pumps</h2>
+        <ul class="bullet">
+          <li>Peristaltic pumps for aquariums</li>
+          <li>powered by 12V</li>
+          <li>on/off behavior</li>
+          <li>no pulse wide modulation needed</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Our goal for NodeConf.eu</h2>
+        <ul class="bullet">
+          <li>Serve 150 cocktails in 1 hour and a half</li>
+          <li>90 minutes for 150 cocktails</li>
+          <li>3 minutes for a cocktail</li>
+          <li>150 * 3 / 9 = 3.33</li>
+          <li>Redundancy: 6 robots</li>
+        </ul>
+      </section>
+      <section>
+        <h2>The problem</h2>
+        <ul class="bullet">
+          <li>We decided to control 6 pumps from a Pi2</li>
+          <li>Wi-Fi!</li>
+          <li>Circuit Design?</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Controlling circuit</h2><img src="../images/schema2.svg" style="height: 80%">
+      </section>
+      <section>
+        <h2>Controlling circuit</h2>
+        <ul class="bullet">
+          <li>6 pumps x 3 = 18 pumps</li>
+          <li>18 transistors</li>
+          <li>18 diodes</li>
+          <li>3 x prototyping boards</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Too much soldering!</h2>
+      </section>
+      <section data-bespoke-backdrop="norway" class="trans">
+        <h2 style="color: white">My 2-week vacation</h2>
+      </section>
+      <section data-bespoke-backdrop="hammer" class="trans">
+        <h2 style="color: white">The engineering solution</h2>
+      </section>
+      <section>
+        <h2>No diode</h2><img src="../images/schema.svg" style="height: 80%">
+      </section>
+      <section>
+        <h2>Sourcing parts</h2>
+        <ul class="bullet">
+          <li>6 pumps x 3 + 1 = 19 pumps</li>
+          <li>20 transistors</li>
+          <li>5 x prototyping boards</li>
+          <li>A bag of resistors</li>
+          <li>LOADS of wires</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Lots of soldering</h2>
+        <h3>..and burns</h3><img src="images/IMG_3180.jpg" style="height: 80%">
+      </section>
+      <section>
+        <h2>Architecture Requirements</h2>
+        <ul class="bullet">
+          <li>Control panel & status board</li>
+          <li>Robot code on the Pi</li>
+          <li>Robot code agnostic to the recepies</li>
+          <li>Recepies on the panel's server</li>
+          <li>Persistent job queue</li>
+          <li>3 days to write it!</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Using a pub/sub broker</h2>
+      </section>
+      <section>
+        <h2>Publish-Subscribe</h2><img src="images/pubsub.png" style="height: 100%">
+      </section>
+      <section class="full-imgs"><img src="images/mqttorg.svg"></section>
+      <section>
+        <h2>MQTT</h2>
+        <ul>
+          <li>publish/subscribe protocol</li>
+          <li>multiple quality of service level..</li>
+          <li>..with at-least-once and exactly-once semantics</li>
+          <li>low overhead (2 bytes at minimum)</li>
+          <li>offline messaging</li>
+          <li>retained messages, like a key/value store</li>
+          <li>can run over WebSocket</li>
+        </ul>
+      </section>
+      <section>
+        <div style="width: 90%;"><img src="images/MQTT.js.png" style="width: 50%; display: block;"><img src="images/johnny-five.png" style="width: 50%; display: block;"></div>
+      </section>
+      <section>
+        <h2>MQTT.js example</h2>
+        <pre><code class="language-javascript">var client = mqtt.connect()
+client.publish('msg', 'hello', (err) => {
+  console.log('sent!', err)
+})
+client.subscribe("msg/#")
+client.on('message', (topic, payload) => {
+  console.log(topic, payload.toString())
+})
+</code></pre>
+      </section>
+      <section>
+        <h2>Message Flow</h2><img src="images/pubsub-arch.png" style="height: 100%">
+      </section>
+      <section>
+        <h2>Problem: The interface</h2><img src="../images/pushbutton.jpg" style="height: 80%">
+      </section>
+      <section>
+        <h2>Problem: The interface</h2><img src="../images/pushbutton2.jpg" style="height: 80%">
+      </section>
+      <section>
+        <h2>Button controlling circuit</h2><img src="../images/schema3.svg" style="height: 80%">
+      </section>
+      <section>
+        <h2>We were one TIP120 short</h2><img src="../images/twitter.png" style="height: 80%">
+      </section>
+      <section>
+        <h2>Solution we built one!</h2>
+        <ul class="bullet">
+          <li>the TIP120 is controlled by voltage that can drive high currents</li>
+          <li>we had a NPN transistor controlled by voltage that can drive low currents</li>
+          <li>we had a transistor controlled by low currents that can drive high currents</li>
+          <li>remembering my analog electronics exam took 1 day</li>
+        </ul>
+      </section>
+      <section>
+        <h2>One last problem</h2>
+      </section>
+      <section data-bespoke-backdrop="bottle" class="trans">
+        <h2 style="color: white; margin-left: 20%;">Viscosity</h2>
+      </section>
+      <section>
+        <h2>In the process..</h2>
+        <ul class="bullet">
+          <li>We did a lot of testing..</li>
+          <li>..and tasting</li>
+          <li>We fried 2 Raspberry Pi</li>
+          <li>We popped 4 transistors</li>
+          <li>..and made one :)</li>
+          <li>We wired 200+ wires</li>
+          <li>We soldered five boards</li>
+          <li>We live-deployed 10+ times while serving cocktails</li>
+        </ul>
+      </section>
+      <section>
+        <div style="width: 90%; heigth: 90%;">
+          <video autoplay loop style="width: 50%; display: block; float: right; position: relative;">
+            <source src="images/IMG_3218.m4v" type="video/mp4">
+          </video>
+          <video autoplay loop style="width: 50%; display: block; float: left; position: relative;">
+            <source src="images/IMG_3199.m4v" type="video/mp4">
+          </video>
+        </div>
+      </section>
+      <section data-bespoke-backdrop="robot1" class="trans"></section>
+      <section data-bespoke-backdrop="robot2" class="trans"></section>
+      <section data-bespoke-backdrop="robot3" class="trans">
+        <div style="color: white" class="copyright">photo by&nbsp;<a href="https://twitter.com/fotoverite" style="color: white">Matthew Bergman</a></div>
+      </section>
+      <section data-bespoke-backdrop="robot" class="trans">
+        <div style="color: white" class="copyright">photo by&nbsp;<a href="https://twitter.com/fotoverite" style="color: white">Matthew Bergman</a></div>
+      </section>
+      <section data-bespoke-backdrop="callback-hell" class="trans"></section>
+      <section>
+        <h2>Unsolved problems</h2>
+        <ul class="bullet">
+          <li>deploying code to the boards is hard</li>
+          <li>WiFi is hard</li>
+          <li>configuration is usually complex</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Lesson Learned</h2>
+        <ul class="bullet">
+          <li>"do or do not, there is no try"</li>
+          <li>being resourceful</li>
+          <li>DO SOURCE YOUR PARTS CAREFULLY</li>
+          <li>keep it simple</li>
+          <li>building snowflakes is fun!</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Open Source</h2>
+        <ul>
+          <li>workaholic-ui - https://github.com/thekemkid/workaholic-ui</li>
+          <li>robot - https://github.com/darragh-hayes/robot</li>
+          <li>cocktail-control - http://github.com/mcollina/cocktail-control</li>
+        </ul>
+      </section>
+      <section>
+        <h2>The Team!</h2>
+        <ul class="bullet">
+          <li>Darragh Hayes</li>
+          <li>Glen Keane</li>
+          <li>Marco Piraccini</li>
+          <li>Julian Cheal</li>
+          <li>Matteo Collina</li>
+        </ul>
+      </section>
+      <section data-bespoke-backdrop="joe" class="trans">
+        <h2 style="color: white" class="bullet">Joe Maguire</h2>
+      </section>
+      <section>
+        <h2>This presentation</h2>
+        <ul class="bullet">
+          <li><a href="https://mcollina.github.io/nodebots-at-scale">https://mcollina.github.io/nodebots-at-scale</a></li>
+          <li><a href="https://github.com/mcollina/nodebots-at-scale">
+              https://github.com/mcollina/nodebots-at-scale
+              </a></li>
+        </ul>
+      </section>
+      <section class="full-imgs"><img src="images/me.png">
+        <h3><a href="http://github.com/mcollina">http://github.com/mcollina</a></h3>
+      </section>
+      <section>
+        <h1>Thanks!</h1><a href="http://nearform.com" style="width: 20%"><img src="./images/nearform.svg"></a><br>
+        <h3><a href="mailto:matteo.collina@nearform.com">matteo.collina@nearform.com</a></h3>
+        <h3><a href="http://twitter.com/matteocollina">@matteocollina</a> on Twitter</h3>
+        <h3><a href="http://www.nearform.com">www.nearform.com</a></h3>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>
